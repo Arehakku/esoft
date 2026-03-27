@@ -1,0 +1,149 @@
+{
+	margin: 0;
+	padding: 0;
+}
+        
+	body {
+		background-color: lightblue;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		}
+        
+	.dom {
+		position: relative;
+		width: 500px;
+		height: 400px;
+		margin: 50px;
+		}
+        
+	.osnovanie {
+		width: 400px;
+		height: 250px;
+		background-color: #DEB887;
+		position: absolute;
+		bottom: 0;
+		left: 50px;
+		border-radius: 10px 10px 0 0;
+		box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+		}
+        
+	.dymohod {
+		width: 40px;
+		height: 80px;
+		background-color: #8B4513;
+		position: absolute;
+		top: -60px;
+		right: 80px;
+		border-radius: 5px 5px 0 0;
+		box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+		}
+.krisha {
+		width: 0;
+		height: 0;
+		border-left: 220px solid transparent;
+		border-right: 220px solid transparent;
+		border-bottom: 150px solid #CD5C5C;
+		position: absolute;
+		top: -80px;
+		left: 30px;
+		}
+        
+	.dymohod::before {
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: -5px;
+		width: 50px;
+		height: 12px;
+		background-color: #654321;
+		border-radius: 5px;
+		}
+        
+	.okno {
+		width: 80px;
+		height: 80px;
+		background-color: #87CEEB;
+		border-radius: 50%;
+		border: 5px solid #FFD700;
+		position: absolute;
+		top: 80px;
+		left: 185px;
+		box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+		}
+        
+	.okno::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		background-color: #8B4513;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		}
+        
+	.okno::after {
+		content: "";
+		position: absolute;
+		width: 4px;
+		height: 100%;
+		background-color: #8B4513;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+		}
+        
+	.dver {
+		width: 70px;
+		height: 110px;
+		background-color: #8B5A2B;
+		position: absolute;
+		bottom: 0;
+		left: 190px;
+		border-radius: 5px 5px 0 0;
+		box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+		}
+        
+	.ruchka {
+		width: 8px;
+		height: 8px;
+		background-color: gold;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		}
+        
+	.dver::after {
+		content: "";
+		position: absolute;
+		bottom: -8px;
+		left: -8px;
+		width: 86px;
+		height: 6px;
+		background-color: #654321;
+		border-radius: 3px;
+		}
+        
+	@media (max-width: 600px) {
+		.dom {
+			transform: scale(0.7);
+			}
+		}
+        
+	.dom {
+		animation: poyavlenie 0.8s;
+		}
+        
+	@keyframes poyavlenie {
+		from {
+			opacity: 0;
+			transform: scale(0.9);
+			}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+}
